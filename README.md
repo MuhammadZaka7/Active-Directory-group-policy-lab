@@ -1,6 +1,6 @@
 # Active Directory & Group Policy Deployment Lab
 
-A hands-on Windows Server 2022 lab built to simulate a small business Active Directory environment across two physical hosts. The project covers domain services, DNS, domain-joined endpoints, organizational units, security groups, SMB file sharing, NTFS permissions, Group Policy, and PowerShell-based validation.
+A hands on Windows Server 2022 lab built to simulate a small business Active Directory environment across two physical hosts. The project covers domain services, DNS, domain joined endpoints, organizational units, security groups, SMB file sharing, NTFS permissions, Group Policy, and PowerShell based validation.
 
 ## Lab Architecture
 
@@ -17,7 +17,7 @@ flowchart LR
 | System | Role |
 |---|---|
 | `DC01` | Windows Server 2022 domain controller |
-| `CLIENT01` | Windows 11 Enterprise domain-joined workstation |
+| `CLIENT01` | Windows 11 Enterprise domain joined workstation |
 | `zakalab.test` | Active Directory forest/domain |
 | Tailscale | Private connectivity between VMs hosted on separate physical machines |
 
@@ -41,17 +41,17 @@ flowchart LR
 
 - Deployed a new Active Directory forest: `zakalab.test`
 - Promoted `DC01` to a domain controller
-- Configured AD-integrated DNS and verified LDAP SRV records
+- Configured AD integrated DNS and verified LDAP SRV records
 - Joined `CLIENT01` to the domain
 - Created departmental OUs for IT, HR, and Sales
 - Created global security groups for department-based access control
 - Created test employee accounts and assigned group membership
-- Created an SMB department share with Access-Based Enumeration
+- Created an SMB department share with Access Based Enumeration
 - Configured NTFS permissions using department security groups
 - Deployed department drive mappings with Group Policy Preferences
 - Applied an employee security baseline using Group Policy
 - Tested authorized and unauthorized file access
-- Built a PowerShell health-check script to validate the lab
+- Built a PowerShell health check script to validate the lab
 
 ## Active Directory Structure
 
@@ -167,8 +167,8 @@ Key issues resolved included:
 - Restored outbound HTTPS connectivity from the Windows VM through libvirt NAT.
 - Connected two VMs running on separate physical hosts through Tailscale.
 - Diagnosed AD DNS/SRV record registration and ensured the domain controller answered DNS on its Tailscale address.
-- Resolved domain-join and first-login connectivity issues.
-- Reworked an initial item-level-targeted drive-mapping design into simpler OU-linked department GPOs.
+- Resolved domain-join and first login connectivity issues.
+- Reworked an initial item level targeted drive-mapping design into simpler OU-linked department GPOs.
 
 More detail is available in [`docs/troubleshooting.md`](docs/troubleshooting.md).
 
@@ -197,11 +197,11 @@ Resolve-DnsName
 - Identity and access management
 - Security group administration
 - SMB / NTFS permissions
-- Role-based access control
+- Role based access control
 - Windows endpoint domain integration
 - PowerShell administration
 - Linux firewall and virtualization troubleshooting
-- Cross-platform networking
+- Cross platform networking
 - Technical documentation
 
 ## Future Improvements
